@@ -1,0 +1,3 @@
+/home/marco/projects/Perceptron/build/CMakeFiles/perceptron.dir
+/home/marco/projects/Perceptron/build/CMakeFiles/edit_cache.dir
+/home/marco/projects/Perceptron/build/CMakeFiles/rebuild_cache.dir
