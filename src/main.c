@@ -6,7 +6,7 @@ int main() {
   Perceptron *p = create_perceptron(2, 0.01f);
 
   // Exemplo: Treinando para saída 1 com entrada [1.0, 0.0]
-  float input[2] = {1.0, 0.0};
+  float input[6] = {1.0, 0.0, 2.0, 3.0, 6.0, 9.5};
   train(p, input, 1);
 
   int result = activate(p, input);
