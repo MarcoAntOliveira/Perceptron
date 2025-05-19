@@ -2,6 +2,18 @@
 this repository is dedicated to activity for intellligence systems in the course mecthronic's engeenring
 ![um](https://miro.medium.com/v2/resize:fit:640/format:webp/1*qnKPo2eELpkucJpqkHF6qw.gif)
 
+## Parametros do perceptron
+## Pesos e Viés (Inicialização)
+Como são definidos inicialmente?
+
+Geralmente, os pesos e o viés são inicializados com valores aleatórios pequenos (ex: entre -1 e 1).
+
+    Isso porque o perceptron aprende os valores corretos durante o treinamento.
+2. Taxa de Aprendizado (Learning Rate, η)
+Como escolher?
+A taxa de aprendizado controla o quanto os pesos são ajustados a cada erro.
+Comece com η = 0.01 e vá testando. Se não estiver aprendendo, aumente. Se estiver oscilando, diminua.
+
 ## Dataset
 the link of dataset is here [text](https://c3.ndc.nasa.gov/dashlink/projects/42/resources/?type=ds)
 

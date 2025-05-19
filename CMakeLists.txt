@@ -4,6 +4,8 @@ project(perceptron_project C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(perceptron
-    main.c
-    perceptron.c
+    src/main.c
+    src/perceptron.c
 )
+
+target_include_directories(perceptron PRIVATE include)

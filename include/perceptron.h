@@ -15,8 +15,6 @@ typedef struct {
   float bias;
 } Perceptron;
 
-
-
 // Inicializa o Perceptron
 Perceptron* create_perceptron(int num_inputs, float learning_rate);
 
@@ -29,10 +27,5 @@ void train(Perceptron *p, float *inputs, int desired_output);
 
 // Libera a memória do perceptron
 void destroy_perceptron(Perceptron *p);
-
-
-
-
-
 
 #endif

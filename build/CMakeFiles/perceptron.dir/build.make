@@ -69,44 +69,44 @@ include CMakeFiles/perceptron.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/perceptron.dir/flags.make
 
-CMakeFiles/perceptron.dir/main.c.o: CMakeFiles/perceptron.dir/flags.make
-CMakeFiles/perceptron.dir/main.c.o: ../main.c
-CMakeFiles/perceptron.dir/main.c.o: CMakeFiles/perceptron.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marco/projects/Perceptron/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/perceptron.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perceptron.dir/main.c.o -MF CMakeFiles/perceptron.dir/main.c.o.d -o CMakeFiles/perceptron.dir/main.c.o -c /home/marco/projects/Perceptron/main.c
+CMakeFiles/perceptron.dir/src/main.c.o: CMakeFiles/perceptron.dir/flags.make
+CMakeFiles/perceptron.dir/src/main.c.o: ../src/main.c
+CMakeFiles/perceptron.dir/src/main.c.o: CMakeFiles/perceptron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marco/projects/Perceptron/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/perceptron.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perceptron.dir/src/main.c.o -MF CMakeFiles/perceptron.dir/src/main.c.o.d -o CMakeFiles/perceptron.dir/src/main.c.o -c /home/marco/projects/Perceptron/src/main.c
 
-CMakeFiles/perceptron.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/perceptron.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marco/projects/Perceptron/main.c > CMakeFiles/perceptron.dir/main.c.i
+CMakeFiles/perceptron.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/perceptron.dir/src/main.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marco/projects/Perceptron/src/main.c > CMakeFiles/perceptron.dir/src/main.c.i
 
-CMakeFiles/perceptron.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/perceptron.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marco/projects/Perceptron/main.c -o CMakeFiles/perceptron.dir/main.c.s
+CMakeFiles/perceptron.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/perceptron.dir/src/main.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marco/projects/Perceptron/src/main.c -o CMakeFiles/perceptron.dir/src/main.c.s
 
-CMakeFiles/perceptron.dir/perceptron.c.o: CMakeFiles/perceptron.dir/flags.make
-CMakeFiles/perceptron.dir/perceptron.c.o: ../perceptron.c
-CMakeFiles/perceptron.dir/perceptron.c.o: CMakeFiles/perceptron.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marco/projects/Perceptron/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/perceptron.dir/perceptron.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perceptron.dir/perceptron.c.o -MF CMakeFiles/perceptron.dir/perceptron.c.o.d -o CMakeFiles/perceptron.dir/perceptron.c.o -c /home/marco/projects/Perceptron/perceptron.c
+CMakeFiles/perceptron.dir/src/perceptron.c.o: CMakeFiles/perceptron.dir/flags.make
+CMakeFiles/perceptron.dir/src/perceptron.c.o: ../src/perceptron.c
+CMakeFiles/perceptron.dir/src/perceptron.c.o: CMakeFiles/perceptron.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marco/projects/Perceptron/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/perceptron.dir/src/perceptron.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/perceptron.dir/src/perceptron.c.o -MF CMakeFiles/perceptron.dir/src/perceptron.c.o.d -o CMakeFiles/perceptron.dir/src/perceptron.c.o -c /home/marco/projects/Perceptron/src/perceptron.c
 
-CMakeFiles/perceptron.dir/perceptron.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/perceptron.dir/perceptron.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marco/projects/Perceptron/perceptron.c > CMakeFiles/perceptron.dir/perceptron.c.i
+CMakeFiles/perceptron.dir/src/perceptron.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/perceptron.dir/src/perceptron.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marco/projects/Perceptron/src/perceptron.c > CMakeFiles/perceptron.dir/src/perceptron.c.i
 
-CMakeFiles/perceptron.dir/perceptron.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/perceptron.dir/perceptron.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marco/projects/Perceptron/perceptron.c -o CMakeFiles/perceptron.dir/perceptron.c.s
+CMakeFiles/perceptron.dir/src/perceptron.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/perceptron.dir/src/perceptron.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marco/projects/Perceptron/src/perceptron.c -o CMakeFiles/perceptron.dir/src/perceptron.c.s
 
 # Object files for target perceptron
 perceptron_OBJECTS = \
-"CMakeFiles/perceptron.dir/main.c.o" \
-"CMakeFiles/perceptron.dir/perceptron.c.o"
+"CMakeFiles/perceptron.dir/src/main.c.o" \
+"CMakeFiles/perceptron.dir/src/perceptron.c.o"
 
 # External object files for target perceptron
 perceptron_EXTERNAL_OBJECTS =
 
-perceptron: CMakeFiles/perceptron.dir/main.c.o
-perceptron: CMakeFiles/perceptron.dir/perceptron.c.o
+perceptron: CMakeFiles/perceptron.dir/src/main.c.o
+perceptron: CMakeFiles/perceptron.dir/src/perceptron.c.o
 perceptron: CMakeFiles/perceptron.dir/build.make
 perceptron: CMakeFiles/perceptron.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marco/projects/Perceptron/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable perceptron"

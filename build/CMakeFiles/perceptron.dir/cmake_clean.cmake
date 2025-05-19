@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/perceptron.dir/main.c.o"
-  "CMakeFiles/perceptron.dir/main.c.o.d"
-  "CMakeFiles/perceptron.dir/perceptron.c.o"
-  "CMakeFiles/perceptron.dir/perceptron.c.o.d"
+  "CMakeFiles/perceptron.dir/src/main.c.o"
+  "CMakeFiles/perceptron.dir/src/main.c.o.d"
+  "CMakeFiles/perceptron.dir/src/perceptron.c.o"
+  "CMakeFiles/perceptron.dir/src/perceptron.c.o.d"
   "perceptron"
   "perceptron.pdb"
 )

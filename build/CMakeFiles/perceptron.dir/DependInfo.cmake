@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/marco/projects/Perceptron/main.c" "CMakeFiles/perceptron.dir/main.c.o" "gcc" "CMakeFiles/perceptron.dir/main.c.o.d"
-  "/home/marco/projects/Perceptron/perceptron.c" "CMakeFiles/perceptron.dir/perceptron.c.o" "gcc" "CMakeFiles/perceptron.dir/perceptron.c.o.d"
+  "/home/marco/projects/Perceptron/src/main.c" "CMakeFiles/perceptron.dir/src/main.c.o" "gcc" "CMakeFiles/perceptron.dir/src/main.c.o.d"
+  "/home/marco/projects/Perceptron/src/perceptron.c" "CMakeFiles/perceptron.dir/src/perceptron.c.o" "gcc" "CMakeFiles/perceptron.dir/src/perceptron.c.o.d"
   )
 
 # Targets to which this target links.

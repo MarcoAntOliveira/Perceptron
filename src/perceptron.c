@@ -1,7 +1,4 @@
 #include  "perceptron.h"
-
-
-
 // Inicializa o Perceptron
 Perceptron* create_perceptron(int num_inputs, float learning_rate) {
     Perceptron *p = (Perceptron*) malloc(sizeof(Perceptron));

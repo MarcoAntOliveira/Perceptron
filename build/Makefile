@@ -129,53 +129,53 @@ perceptron/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/build
 .PHONY : perceptron/fast
 
-main.o: main.c.o
-.PHONY : main.o
+src/main.o: src/main.c.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/main.c.o
-.PHONY : main.c.o
+src/main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/main.c.o
+.PHONY : src/main.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+src/main.i: src/main.c.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/main.c.i
-.PHONY : main.c.i
+src/main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/main.c.i
+.PHONY : src/main.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+src/main.s: src/main.c.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/main.c.s
-.PHONY : main.c.s
+src/main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/main.c.s
+.PHONY : src/main.c.s
 
-perceptron.o: perceptron.c.o
-.PHONY : perceptron.o
+src/perceptron.o: src/perceptron.c.o
+.PHONY : src/perceptron.o
 
 # target to build an object file
-perceptron.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/perceptron.c.o
-.PHONY : perceptron.c.o
+src/perceptron.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/perceptron.c.o
+.PHONY : src/perceptron.c.o
 
-perceptron.i: perceptron.c.i
-.PHONY : perceptron.i
+src/perceptron.i: src/perceptron.c.i
+.PHONY : src/perceptron.i
 
 # target to preprocess a source file
-perceptron.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/perceptron.c.i
-.PHONY : perceptron.c.i
+src/perceptron.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/perceptron.c.i
+.PHONY : src/perceptron.c.i
 
-perceptron.s: perceptron.c.s
-.PHONY : perceptron.s
+src/perceptron.s: src/perceptron.c.s
+.PHONY : src/perceptron.s
 
 # target to generate assembly for a file
-perceptron.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/perceptron.c.s
-.PHONY : perceptron.c.s
+src/perceptron.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/perceptron.dir/build.make CMakeFiles/perceptron.dir/src/perceptron.c.s
+.PHONY : src/perceptron.c.s
 
 # Help Target
 help:
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... perceptron"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... perceptron.o"
-	@echo "... perceptron.i"
-	@echo "... perceptron.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/perceptron.o"
+	@echo "... src/perceptron.i"
+	@echo "... src/perceptron.s"
 .PHONY : help
 
 
