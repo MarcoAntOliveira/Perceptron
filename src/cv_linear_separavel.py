@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import KFold
 
 # Carregar a base de dados linearmente separável
-df = pd.read_csv("/mnt/data/base_linear_separavel.csv")
+df = pd.read_csv("data/base_linear_separavel.csv")
 
 # Separar X e y
 X = df[["x1", "x2"]].values
@@ -20,8 +20,8 @@ for fold_num, (train_idx, test_idx) in enumerate(kf.split(X), start=1):
     test_data = df.iloc[test_idx]
 
     # Salvar cada fold em CSV
-    train_path = f"/mnt/data/fold{fold_num}_train.csv"
-    test_path = f"/mnt/data/fold{fold_num}_test.csv"
+    train_path = f"data/fold{fold_num}_train.csv"
+    test_path = f"data/fold{fold_num}_test.csv"
 
     train_data.to_csv(train_path, index=False)
     test_data.to_csv(test_path, index=False)

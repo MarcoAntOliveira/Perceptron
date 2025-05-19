@@ -1,7 +1,8 @@
 # Perceptron
 this repository is dedicated to activity for intellligence systems in the course mecthronic's engeenring
 ![um](https://miro.medium.com/v2/resize:fit:640/format:webp/1*qnKPo2eELpkucJpqkHF6qw.gif)
-
+## link do relatorio
+[link](https://www.overleaf.com/read/pvqtpgntjwnd#1f4bcc)
 ## Parametros do perceptron
 ## Pesos e Viés (Inicialização)
 Como são definidos inicialmente?

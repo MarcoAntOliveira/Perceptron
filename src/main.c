@@ -1,6 +1,23 @@
 #include "perceptron.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main() {
+
+    FILE *file = fopen("../include/data/base_xor.csv", "r");
+    if (!file) {
+        fprintf(stderr, "Cannot open file base_xor.csv\n");
+        return 1;
+    }
+
+    char line[1024];  // Suporte para linhas de até 1023 caracteres
+    while (fgets(line, sizeof(line), file)) {
+        printf("%s", line);  // Imprime a linha (inclui o \n se houver)
+    }
+
+    fclose(file);
+
   srand(time(NULL)); // Para aleatoriedade
 
   Perceptron *p = create_perceptron(2, 0.01f);

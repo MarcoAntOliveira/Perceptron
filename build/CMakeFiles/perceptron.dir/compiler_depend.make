@@ -61,7 +61,9 @@ CMakeFiles/perceptron.dir/src/main.c.o: ../src/main.c \
   /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
 CMakeFiles/perceptron.dir/src/perceptron.c.o: ../src/perceptron.c \
   /usr/include/stdc-predef.h \
@@ -126,6 +128,8 @@ CMakeFiles/perceptron.dir/src/perceptron.c.o: ../src/perceptron.c \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
 
 
+/usr/include/strings.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
@@ -175,6 +179,8 @@ CMakeFiles/perceptron.dir/src/perceptron.c.o: ../src/perceptron.c \
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 ../include/perceptron.h:
+
+/usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
