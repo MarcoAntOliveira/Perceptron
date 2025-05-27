@@ -24,7 +24,8 @@ int activate(Perceptron *p, float *inputs);
 
 // Treina o perceptron com uma amostra
 void train(Perceptron *p, float *inputs, int desired_output);
-
+// Avalia o treinamento da IA
+void evaluate(Perceptron *p, const char *test_path);
 // Libera a memória do perceptron
 void destroy_perceptron(Perceptron *p);
 

@@ -42,6 +42,41 @@ void train(Perceptron *p, float *inputs, int desired_output) {
         p->weights[p->num_inputs] += p->learning_rate * error * p->bias;
     }
 }
+void evaluate(Perceptron *p, const char *test_path) {
+    FILE *test_file = fopen(test_path, "r");
+    if (!test_file) {
+        perror("Erro ao abrir base de teste");
+        return;
+    }
+
+    char line[1024];
+    int correct = 0, total = 0;
+
+    // Ignora o cabeçalho
+    fgets(line, sizeof(line), test_file);
+
+    while (fgets(line, sizeof(line), test_file)) {
+        float x1, x2;
+        int label;
+
+        // Parse da linha (esperando: x1,x2,label)
+        if (sscanf(line, "%f,%f,%d", &x1, &x2, &label) == 3) {
+            float inputs[2] = {x1, x2};
+            int prediction = activate(p, inputs);
+
+            if (prediction == label)
+                correct++;
+
+            total++;
+        }
+    }
+
+    fclose(test_file);
+
+    float accuracy = 100.0f * correct / total;
+    printf("Acurácia no teste: %.2f%% (%d corretos de %d)\n", accuracy, correct, total);
+}
+
 
 // Libera a memória do perceptron
 void destroy_perceptron(Perceptron *p) {

@@ -45,3 +45,7 @@ termos de resultados de classificação obtidos, não em termos de tempo computa
 configurações de rede no problema que você escolheu abordar. Reporte de forma detalhada qual forma de
 validação do modelo você usou (validação cruzada? hold out? treinou e testou nos mesmos dados?) e quais
 métricas de avaliação você empregou. As decisões adotadas serão critério para avaliação do seu trabalho
+
+### Saida do programa atual
+![saída do código ](image.png)
+
