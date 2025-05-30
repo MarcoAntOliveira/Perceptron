@@ -72,9 +72,10 @@ int main() {
             float acc = (float) correct / total;
 
             // Salva no arquivo de log
-            fprintf(log, "%d,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f\n",
-                    epoch, acc, p->bias,
-                    p->weights[0], p->weights[1], p->weights[2], p->weights[3]);
+          fprintf(log, "%d,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f\n",
+        epoch, acc, p->bias,
+        p->weights[0], p->weights[1], p->weights[2], p->weights[3]);
+
         }
 
         fclose(log);

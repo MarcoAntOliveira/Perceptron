@@ -47,5 +47,4 @@ validação do modelo você usou (validação cruzada? hold out? treinou e testo
 métricas de avaliação você empregou. As decisões adotadas serão critério para avaliação do seu trabalho
 
 ### Saida do programa atual
-![saída do código ](image.png)
-
+![plotagem dos gráficos](image-1.png)

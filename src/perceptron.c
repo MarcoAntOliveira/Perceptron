@@ -42,7 +42,6 @@ void train(Perceptron *p, float *inputs,  FILE *log_file, int desired_output, in
         // Atualiza o bias diretamente
         p->bias += p->learning_rate * error;
     }
-   fprintf(log_file, "%d,%d\n", epoch, error);
 }
 
 void evaluate(Perceptron *p, const char *test_path) {
