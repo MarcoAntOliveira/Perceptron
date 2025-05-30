@@ -1,40 +1,44 @@
-import speech_recognition as sr
-import pyttsx3
 
-# # Inicializa o reconhecedor de voz
-# r = sr.Recognizer()
+# import pandas as pd
+# import matplotlib.pyplot as plt
+# import time
 
-# # Função para converter texto em fala
-# def SpeakText(command):
-#     engine = pyttsx3.init()
-#     engine.say(command)
-#     engine.runAndWait()
+# plt.ion()
+# fig, ax = plt.subplots()
 
-# # Loop infinito para capturar voz do usuário
 # while True:
 #     try:
-#         # Usa o microfone como fonte de entrada
-#         with sr.Microphone() as source:
-#             print("Ajustando ruído ambiente. Aguarde um momento...")
-#             r.adjust_for_ambient_noise(source, duration=0.5)
-#             print("Pode falar agora...")
+#         df = pd.read_csv("build/data/train_log_fold1.csv")
+#         ax.clear()
+#         ax.plot(df["epoch"], df["accuracy"], label="Acurácia")
+#         ax.set_xlabel("Época")
+#         ax.set_ylabel("Acurácia")
+#         ax.set_xlim(0,100)
+#         ax.set_ylim(0, 1)
+#         ax.set_title("Treinamento do Perceptron")
+#         ax.legend()
+#         plt.pause(0.5)
+#     except Exception as e:
+#         print("Aguardando dados...", e)
+#         time.sleep(1)
 
-#             # Escuta o áudio do usuário
-#             audio = r.listen(source)
 
-#             # Usa o Google para reconhecer o áudio
-#             MyText = r.recognize_google(audio, language='pt-BR')  # ou 'en-US' para inglês
-#             MyText = MyText.lower()
 
-#             print("Você disse:", MyText)
-#             SpeakText(MyText)
+import pandas as pd
+import matplotlib.pyplot as plt
 
-#     except sr.RequestError as e:
-#         print(f"Erro ao requisitar resultados do serviço de reconhecimento: {e}")
+log = pd.read_csv("build/data/train_log_fold1.csv")  # ou qualquer fold
 
-#     except sr.UnknownValueError:
-        # print("Não foi possível entender o áudio. Tente novamente.")
-robo = pyttsx3.init()
-msg_robo = input('escreva algo: ')
-robo.say(msg_robo)
-robo.runAndWait()
+plt.figure(figsize=(10,6))
+plt.plot(log['epoch'], log['w1'], label='w1')
+plt.plot(log['epoch'], log['w2'], label='w2')
+plt.plot(log['epoch'], log['w3'], label='w3')
+plt.plot(log['epoch'], log['w4'], label='w4')
+plt.plot(log['epoch'], log['bias'], label='bias', linestyle='--')
+
+plt.xlabel('Época')
+plt.ylabel('Valor')
+plt.title('Evolução dos pesos e bias ao longo do tempo')
+plt.legend()
+plt.grid()
+plt.show()

@@ -23,14 +23,15 @@ int activate(Perceptron *p, float *inputs) {
         sum += inputs[i] * p->weights[i];
     }
 
-    // Adiciona o bias
-    sum += p->bias * p->weights[p->num_inputs];
+    // Adiciona o bias diretamente
+    sum += p->bias;
 
     return (sum > 0) ? 1 : 0;
 }
 
+
 // Treina o perceptron com uma amostra
-void train(Perceptron *p, float *inputs, int desired_output) {
+void train(Perceptron *p, float *inputs,  FILE *log_file, int desired_output, int epoch) {
     int guess = activate(p, inputs);
     int error = desired_output - guess;
 
@@ -38,10 +39,12 @@ void train(Perceptron *p, float *inputs, int desired_output) {
         for (int i = 0; i < p->num_inputs; i++) {
             p->weights[i] += p->learning_rate * error * inputs[i];
         }
-        // Atualiza o peso do bias
-        p->weights[p->num_inputs] += p->learning_rate * error * p->bias;
+        // Atualiza o bias diretamente
+        p->bias += p->learning_rate * error;
     }
+   fprintf(log_file, "%d,%d\n", epoch, error);
 }
+
 void evaluate(Perceptron *p, const char *test_path) {
     FILE *test_file = fopen(test_path, "r");
     if (!test_file) {
@@ -56,17 +59,14 @@ void evaluate(Perceptron *p, const char *test_path) {
     fgets(line, sizeof(line), test_file);
 
     while (fgets(line, sizeof(line), test_file)) {
-        float x1, x2;
+        float inputs[4];
         int label;
 
-        // Parse da linha (esperando: x1,x2,label)
-        if (sscanf(line, "%f,%f,%d", &x1, &x2, &label) == 3) {
-            float inputs[2] = {x1, x2};
+        if (sscanf(line, "%f,%f,%f,%f,%d",
+                   &inputs[0], &inputs[1], &inputs[2], &inputs[3], &label) == 5) {
             int prediction = activate(p, inputs);
-
             if (prediction == label)
                 correct++;
-
             total++;
         }
     }

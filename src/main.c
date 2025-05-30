@@ -19,7 +19,6 @@ int main() {
         snprintf(log_file, sizeof(log_file), "data/train_log_fold%d.csv", fold);
 
         FILE *train_file_ptr = fopen(train_file, "r");
-
         if (!train_file_ptr) {
             perror("Erro ao abrir arquivo de treino");
             return 1;
@@ -30,32 +29,54 @@ int main() {
             perror("Erro ao criar arquivo de log");
             return 1;
         }
-        fprintf(log, "epoch,accuracy,weight1,weight2,bias\n");
 
-        float inputs[1000][2];
+        // Cabeçalho corrigido para 7 colunas
+        fprintf(log, "epoch,accuracy,bias,w1,w2,w3,w4\n");
+
+        float inputs[1000][4];
         int labels[1000];
         int total = 0;
-        char line[MAX_LINE];
 
+        char line[MAX_LINE];
         fgets(line, sizeof(line), train_file_ptr); // Pular cabeçalho
+
         while (fgets(line, sizeof(line), train_file_ptr)) {
-            sscanf(line, "%f,%f,%d", &inputs[total][0], &inputs[total][1], &labels[total]);
+            sscanf(line, "%f,%f,%f,%f,%d",
+                   &inputs[total][0],
+                   &inputs[total][1],
+                   &inputs[total][2],
+                   &inputs[total][3],
+                   &labels[total]);
+            printf("Entrada: %.2f %.2f %.2f %.2f | Label: %d\n",
+                   inputs[total][0], inputs[total][1], inputs[total][2], inputs[total][3], labels[total]);
             total++;
         }
         fclose(train_file_ptr);
 
-        Perceptron *p = create_perceptron(2, 0.1f);
+        // Inicializar Perceptron
+        Perceptron *p = create_perceptron(4, 0.05f);
 
         for (int epoch = 1; epoch <= MAX_EPOCHS; epoch++) {
+            // Treinamento
+            for (int i = 0; i < total; i++) {
+                train(p, inputs[i], log, labels[i], epoch);
+            }
+
+            // Avaliação no conjunto de treino
             int correct = 0;
             for (int i = 0; i < total; i++) {
-                train(p, inputs[i], labels[i]);
                 int output = activate(p, inputs[i]);
                 if (output == labels[i]) correct++;
             }
+
             float acc = (float) correct / total;
-            fprintf(log, "%d,%.4f,%f,%f,%f\n", epoch, acc, p->weights[0], p->weights[1], p->weights[2]);
+
+            // Salva no arquivo de log
+            fprintf(log, "%d,%.4f,%.4f,%.4f,%.4f,%.4f,%.4f\n",
+                    epoch, acc, p->bias,
+                    p->weights[0], p->weights[1], p->weights[2], p->weights[3]);
         }
+
         fclose(log);
 
         // Avaliação no conjunto de teste
@@ -67,10 +88,11 @@ int main() {
 
         int correct = 0, total_test = 0;
         fgets(line, sizeof(line), test); // Pular cabeçalho
+
         while (fgets(line, sizeof(line), test)) {
-            float x[2];
+            float x[4];
             int y;
-            sscanf(line, "%f,%f,%d", &x[0], &x[1], &y);
+            sscanf(line, "%f,%f,%f,%f,%d", &x[0], &x[1], &x[2], &x[3], &y);
             int pred = activate(p, x);
             if (pred == y) correct++;
             total_test++;

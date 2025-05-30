@@ -7,7 +7,7 @@ fig, ax = plt.subplots()
 
 while True:
     try:
-        df = pd.read_csv("build/data/train_log.csv")
+        df = pd.read_csv("build/data/train_log_fold1.csv")
         ax.clear()
         ax.plot(df["epoch"], df["bias"], label="Acurácia")
         ax.set_xlabel("Época")

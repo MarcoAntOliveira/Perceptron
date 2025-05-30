@@ -21,9 +21,8 @@ Perceptron* create_perceptron(int num_inputs, float learning_rate);
 // Função de ativação (degrau)
 int activate(Perceptron *p, float *inputs);
 
-
 // Treina o perceptron com uma amostra
-void train(Perceptron *p, float *inputs, int desired_output);
+void train(Perceptron *p, float *inputs, FILE *log_file, int desired_output, int epoch);
 // Avalia o treinamento da IA
 void evaluate(Perceptron *p, const char *test_path);
 // Libera a memória do perceptron
