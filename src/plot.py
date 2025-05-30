@@ -1,25 +1,23 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import time
+import os
 
-plt.ion()
-fig, ax = plt.subplots()
+# Plotar acurácia de todos os folds
+plt.figure(figsize=(10, 6))
 
-while True:
-    try:
-        df = pd.read_csv("build/data/train_log_fold1.csv")
-        ax.clear()
-        ax.plot(df["epoch"], df["bias"], label="Acurácia")
-        ax.set_xlabel("Época")
-        ax.set_ylabel("Acurácia")
-        ax.set_xlim(0,100)
-        ax.set_ylim(0, 250)
-        ax.set_title("Treinamento do Perceptron")
-        ax.legend()
-        plt.pause(0.5)
-    except Exception as e:
-        print("Aguardando dados...", e)
-        time.sleep(1)
+for fold in range(1, 6):
+    log_path = f"build/data/train_log_fold{fold}.csv"
+    df = pd.read_csv(log_path)
+
+    plt.plot(df['epoch'], df['accuracy'], label=f'Fold {fold}')
+    # plt.plot(df['epoch'], 1 - df['accuracy'], label=f'Erro - Fold {fold}', linestyle='--')
 
 
-
+plt.xlabel('Época')
+plt.ylabel('Acurácia')
+plt.title('Acurácia por Época - Todos os Folds')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
+plt.savefig('build/acuracia_treinamento_folds.png')
+plt.show()

@@ -14,8 +14,8 @@ int main() {
 
     for (int fold = 1; fold <= FOLDS; fold++) {
         char train_file[100], test_file[100], log_file[100];
-        snprintf(train_file, sizeof(train_file), "data/iris_linear_fold%d_train.csv", fold);
-        snprintf(test_file, sizeof(test_file), "data/iris_linear_fold%d_test.csv", fold);
+        snprintf(train_file, sizeof(train_file), "data/iris_nonlinear_fold%d_train.csv", fold);
+        snprintf(test_file, sizeof(test_file), "data/iris_nonlinear_fold%d_test.csv", fold);
         snprintf(log_file, sizeof(log_file), "data/train_log_fold%d.csv", fold);
 
         FILE *train_file_ptr = fopen(train_file, "r");

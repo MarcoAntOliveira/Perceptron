@@ -35,6 +35,7 @@ cd ..
 
 echo "==> Etapa 6: Executando código Python com perceptron"
 python3 src/main.py
+python3 src/plot.py
 
 
 echo "==> Execução finalizada com sucesso."

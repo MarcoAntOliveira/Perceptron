@@ -47,4 +47,12 @@ validação do modelo você usou (validação cruzada? hold out? treinou e testo
 métricas de avaliação você empregou. As decisões adotadas serão critério para avaliação do seu trabalho
 
 ### Saida do programa atual
+#### Dados Lineares
 ![plotagem dos gráficos](image-1.png)
+
+![acurácia ao longo das épocas](image.png)
+
+#### Dados Não Lineares
+![Plotagem da avaliação de dados não lineares](image-2.png)
+
+![Acurácia ao longo das epócas](image-3.png)
