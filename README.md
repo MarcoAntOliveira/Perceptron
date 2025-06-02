@@ -48,11 +48,11 @@ métricas de avaliação você empregou. As decisões adotadas serão critério 
 
 ### Saida do programa atual
 #### Dados Lineares
-![plotagem dos gráficos](image-1.png)
+![plotagem dos gráficos](images/image-1.png)
 
-![acurácia ao longo das épocas](image.png)
+![acurácia ao longo das épocas](images/image.png)
 
 #### Dados Não Lineares
-![Plotagem da avaliação de dados não lineares](image-2.png)
+![Plotagem da avaliação de dados não lineares](images/image-2.png)
 
-![Acurácia ao longo das epócas](image-3.png)
+![Acurácia ao longo das epócas](images/image-3.png)
